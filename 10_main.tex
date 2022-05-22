@@ -1,0 +1,61 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{markdown}
+\usepackage{mathtools}
+\usepackage{wrapfig}
+\usepackage{tabu}
+\usepackage{colortbl}
+\usepackage[hidelinks]{hyperref,xcolor}
+\usepackage[backend=biber]{biblatex}
+\usepackage{adjustbox}
+\usepackage{nomencl}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+\addbibresource{projectplan.bib}
+\addbibresource{prr.bib}
+\addbibresource{design.bib}
+
+\title{Preliminary Research Report\\Remote Water Sensing using UAVs}
+\author{Robin \textsc{Westerik}}
+\newcommand{\supervisors}{Jan \textsc{Bollen}\\Harry \textsc{Futselaar}}
+
+\newcommand{\timePeriod}{February 2022 - June 2022}
+\newcommand{\sprint}{Design}
+\newcommand{\homepage}{\url{https://github.com/organizations/remotewatersensing/}}
+\date{\today}
+
+\makeatletter{}
+
+\makenomenclature
+\renewcommand{\nomname}{}
+
+\begin{document}
+
+\input{./00_title.tex}
+\input{./02_nomenclature.tex}
+
+\tableofcontents
+\pagebreak
+
+\section{Abbreviations}
+\sffamily\footnotesize
+\printnomenclature
+\rmfamily\normalsize
+
+\section{Introduction}
+
+In this report, an overview of the working architecture will be designed, along with several prototypes of ways to measure the water quality using drones. This design report will reference a lot of findings from the preliminary research report.
+
+There will be a lot of communication between stakeholder and the project author to discuss the focus of these designs. Sensors will be selected to measure variables referenced in the preliminary research report based on their accuracy and capability to mount on a drone. A suitable drone will be chosen and modelled. Configurations of sensors on the drone will be designed and illustrated.
+
+
+\input{20_chosendrone}
+\input{30_cadmodel}
+\input{40_sensors}
+\input{50_package}
+
+\newpage
+\printbibliography 
+
+\end{document}
